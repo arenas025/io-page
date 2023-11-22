@@ -1,10 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
+	
+	<!-- <main>
 		<svg
 			class="astro-a"
 			width="495"
@@ -60,7 +60,67 @@ import Card from '../components/Card.astro';
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
 		</ul>
-	</main>
+	</main> -->
+
+	<main>
+			<h1>¡Hola!</h1>
+			<p>
+				Seguramente te estés preguntando ¿Sobre que se trata este blog? ¿Que significa I.O? ¿Por que no estoy usando este tiempo para hacer otra cosa como ver videos en mi celular?
+			</p>
+			<br/>
+			<p>
+				Entiendo, y yo estaría en la misma posición si no hubiera conocido la importancia que tiene este tema en la vida empresarial e incluso en la cotidiana, asi que lo mejor es que sigas leyendo. <b>Te aseguro que valdrá la pena</b>
+			</p>
+			<br/>
+			<h3 class="title1 font-bold bg-[#2337ff] h-12 text-white text-center rounded-lg duration-1000 pt-1 ">¿Que es la I.O?</h3>
+			<div class="text1 transition-all bg-[#2337ff] -mt-[0.4rem] px-6 text-white rounded-b-lg w-full h-1  duration-1000 overflow-scroll">
+				<p class='mt-1'>
+				Es un campo interdisciplinario que utiliza métodos matemáticos, estadísticos y de modelado para analizar y resolver problemas complejos relacionados con la toma de decisiones y la gestión de recursos en organizaciones.
+				</p>
+				
+				<br/>
+				
+				<p>
+					El objetivo principal de la investigación de operaciones es proporcionar herramientas analíticas que ayuden a mejorar la eficiencia y la efectividad en la toma de decisiones, especialmente en situaciones donde los recursos son limitados o se enfrentan a restricciones.
+				</p>
+			<br/>
+
+				<p>
+					<b>En pocas palabras,</b> la investigación de operaciones es como la "herramienta matemática" que ayuda a resolver problemas complicados en la toma de decisiones.
+				</p>
+
+			<br/>
+
+				<p>
+					Imagina que estás planificando un viaje, pero tienes recursos limitados como el tiempo o el dinero o enfrentas obstáculos como el clima. La investigación de operaciones utiliza números y modelos matemáticos para ayudarte a tomar decisiones más inteligentes y eficientes para llevar a cabo eso que planeas.
+				</p>
+			</div>
+			
+				<br/>
+
+				<h3 class="title2 font-bold pt-1 bg-[#ff6e01] h-12 text-white text-center rounded-lg duration-1000 ">La I.O en las empresas</h3>
+				<div class="text2 bg-[#ff6e01] -mt-[0.4rem] px-6 text-white rounded-b-lg w-full h-1  duration-1000 overflow-scroll ">
+					<p>
+						La investigación de operaciones desempeña un papel fundamental en la administración de empresas al proporcionar un enfoque sistemático y cuantitativo para la toma de decisiones, utilizando métodos matemáticos, estadísticos y de modelado para analizar y resolver problemas complejos relacionados con la gestión eficiente de recursos y la optimización de procesos empresariales.
+					</p>
+					
+					<br/>
+
+					<p>
+						La IO se centra en la mejora de la toma de decisiones al apoyar a los líderes empresariales a entender, modelar y optimizar diversas operaciones y procesos, desde la cadena de suministro hasta la asignación de recursos y la planificación estratégica.
+					</p>
+					
+					<br/>
+
+					<p>
+						En resumen, <b>la investigación de operaciones ofrece herramientas analíticas poderosas que permiten a las organizaciones abordar problemas logísticos, mejorar la eficiencia en la producción, optimizar la distribución de recursos y gestionar de manera efectiva la incertidumbre en entornos empresariales dinámicos.</b> 
+					</p>
+
+				<br/>
+
+				</div>
+				</p>
+		</main>
 </Layout>
 
 <style>
@@ -69,9 +129,8 @@ import Card from '../components/Card.astro';
 		padding: 1rem;
 		width: 800px;
 		max-width: calc(100% - 2rem);
-		color: white;
 		font-size: 20px;
-		line-height: 1.6;
+		line-height: 1.3;
 	}
 	.astro-a {
 		position: absolute;
@@ -87,7 +146,7 @@ import Card from '../components/Card.astro';
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
-		margin-bottom: 1em;
+		padding:2rem
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -107,7 +166,7 @@ import Card from '../components/Card.astro';
 		font-size: 0.8em;
 		font-weight: bold;
 		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
+		/* color: rgb(var(--accent-light)); */
 		border-radius: 4px;
 		padding: 0.3em 0.4em;
 	}
@@ -121,3 +180,47 @@ import Card from '../components/Card.astro';
 		padding: 0;
 	}
 </style>
+
+<script>
+			let counter1 = 0
+			let counter2 = 0
+
+			const title1 = document.querySelector(".title1")
+			const text1 = document.querySelector(".text1")
+			title1?.addEventListener('click',()=>{
+				if(counter1 === 0){
+					text1?.classList.add("pb-4")
+					text1?.classList.remove("h-1")
+					text1?.classList.add("h-[1000px]")
+
+					counter1++
+				}else{
+					counter1--
+					text1?.classList.remove("pb-4")
+					text1?.classList.add("h-1")
+					text1?.classList.remove("h-[1000px]")
+				}
+			})
+
+
+
+			const title2 = document.querySelector(".title2")
+			const text2 = document.querySelector(".text2")
+			title2?.addEventListener('click',()=>{
+				if(counter1 === 0){
+					text2?.classList.add("pb-4")
+					text2?.classList.remove("h-1")
+					text2?.classList.add("h-[1000px]")
+					counter1++
+				}else{
+					counter1--
+					text2?.classList.remove("pb-4")
+					text2?.classList.add("h-1")
+					text2?.classList.remove("h-[1000px]")
+				}
+			})
+
+			
+
+			// const textDiv = document.querySelector()
+		</script>

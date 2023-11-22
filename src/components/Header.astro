@@ -1,0 +1,25 @@
+---
+interface routesInterface {
+  name:string,
+  route:string
+}
+const routes:Array<routesInterface> = [
+  {
+    name:"Inicio",
+    route:"/"
+  },
+  {
+    name:"Secciones",
+    route:"/sections"
+  },
+  {
+  name:'¿Quien soy?',
+  route:"/aboutMe"
+  }
+]
+---
+<div class="flex w-full text-white bg-black justify-around py-2">
+    {routes.map((route:routesInterface)=>
+      <a href={route.route}>{route.name}</a>
+    )}
+</div>
