@@ -1,0 +1,145 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="Introducción a la teoria de colas">
+  <section class="p-3">
+    <h1 class="title2 pt-3 font-bold bg-[#ffa938] h-12 tracking-widest text-white text-center rounded-lg duration-1000">Introducción a la teoria de colas</h1>
+    <div class="mt-10">
+      <div>
+        <h1 class="py-1 px-3 bg-black rounded-md text-[#ffa938]">Generalidades</h1>
+        <p class="text-justify mt-2">
+          La teoria de colas es una sección de la investigación de operaciones la cual estudia el comportamiento de sistemas que usan filas o lineas de espera, definiendose filas como la resultante que hay en un sistema cuando la demanda supera la capacidad que puede proporcionar. Este campo es esencial para comprender y optimizar el funcionamiento de sistemas que implican la legada de usuarios o solicitudes para que sean resueltas en un tiempo estimado.
+        </p>
+          <br/>
+        <p class="text-justify">
+          Sus objetivos son los siguientes:
+        </p>
+          <ul class="list-disc px-5 mt-3">
+            <li class="px-2">Identificar un nivel óptimo de capacidad de sistemas que minimiza el costo</li>
+            <li class="px-2">Evaluar qué pasa con las alternativas para modificar la capacidad de un sistema</li>
+            <li class="px-2">Establecer un balance equilibrado entre las calidad y la cantidad</li>
+          </ul>
+          <br/>
+        <p class="text-justify">
+          Además; estas están comformadas por los siguientes componentes
+        </p>
+        <ul class="list-disc px-5 mt-3">
+            <li class="px-2"><b>Población: </b> Son todos los clientes que pueden hacer uso del sistema. Esta puede ser finita o infinita </li>
+            <br/>
+            <li class="px-2"><b>Patrón de llegada: </b> Es la forma en como llegan los clientes al sistema en ese tiempo. Este patrón puede ser determinístico, que es cuando se conoce el tiempo o probabilistico, que es cuando no se sabe cada cuanto llega una persona y se miden en tasa (λ) o tiempo medio de llegada </li>
+            <br/>
+            <li class="px-2"><b>Disciplina de la cola: </b> Es la forma como son atendidos los clientes que están en la fila. Esta tiempo diferentes tipos, siendo estos:</li>
+            <ul class="pl-4 pt-3">
+              <li> <b>PEPS: </b> Primero entra, primero sale </li>
+              <li> <b>UEPS: </b> Último entra, primero sale </li>
+              <li> <b>Prioridad</b>  </li>
+              <li> <b>Aleatorio</b>  </li>
+              <li> <b>Reserva</b>  </li>
+              <li> <b>Necesidad limitada</b>  </li>
+              <li> <b>Menor tiempo de procesamiento </b> </li>
+            </ul>
+            <br/>
+            <li class="px-2"><b>Número de canales: </b>Es la manera en la que se distribuye el sistema. Estos pueden ser:</li>
+            <ul class="pl-4 pt-3">
+              <li> 1 cola, 1 servidor </li>
+              <li> 1 cola multiples servidores </li>
+              <li> Multiples colas, multiple servidores</li>
+              <li> 1 cola, servidores secuenciales </li>
+            </ul>
+            <br/>
+            <li class="px-2"><b>Patrón de servicio: </b>Es la forma en como son atendidos los clientes. Este hace uso de 2 tiempos, al igual que el patron de llegada, los cuales son probabilistico y deterministico y se mide por medio de tasa media de servicio (µ) y tiempo medio de servicio </li>
+            <br/>
+            <li class="px-2"><b>Capacidad del sistema: </b> Es el número de clientes que puede atender el sistema, esta puede ser finita o infinita</li>
+          </ul>
+          <br/>
+        <p class="text-justify">
+          Por ultimo, en esta teoria se da algo que se conoce como notación Kendall la cual fue introducida por David Kendall en 1953. Esta notación está compuesta por 6 variables las cuales van en el siguiente orden
+          <ul class="list-decimal px-5 mt-3">
+            <li class="px-2"><b>A: </b>Patrón de llegada</li>
+            <li class="px-2"><b>B: </b>Patrón de servicio</li>
+            <li class="px-2"><b>C: </b>Número de servidores</li>
+            <li class="px-2"><b>D: </b>Disciplina de la fila</li>
+            <li class="px-2"><b>E: </b>Capacidad del sistema</li>
+            <li class="px-2"><b>F: </b>Población de clientes</li>
+          </ul>
+        </p>
+          <br/>
+          <p>
+            Además, esta cuenta con las siguientes medidas de desempeño que se desarrollan con el fin de la gestión eficiente de el servicio y la fila:
+          </p>
+          <br/>
+          <ul class="list-disc px-5">
+            <li class="text-justify"><b>Probabilidad de ocupación: </b></li>
+            <br>
+            <li class="text-justify"><b>Probabilidad de ocio: </b></li>
+            <br>
+            <li class="text-justify"><b>Número de clientes promedio esperando en la fila</b></li>
+            <br>
+            <li class="text-justify"><b>Número de clientes promedio esperando en la el sistema</b></li>
+            <br>
+            <li class="text-justify"><b>Tiempo promedio de clientes esperando en la fila </b></li>
+            <br>
+            <li class="text-justify"><b>Tiempo promedio de clientes esperando en el sistema</b></li>
+
+          </ul>
+      </div>
+      <div class="mt-10">
+        <h1 class="bg-black py-1 px-3 rounded-md mb-2 text-[#ffa938]">Campos de aplicación</h1>
+        <p class="text-justify mt-2">
+          La adminstración de proyectos se ha convertido en un componente importante en el desarrollo de iniciativas en distintas areas, herramientas como el diagrama de Gantt, de PERT y CPM han permitido que las empresas puedan planificar, coordinar y controlar actividades en proyectos complejos, estos son algunos de sus campos de aplicación.
+        </p>
+        <br/>
+      <ul class="list-disc px-5">
+        <li class="text-justify"><b>Desarrollo de software: </b>Estas herramientas se usan para visualizar y coordinar las etapas de desarrollo del software, gestionar plazos y asignar recursos; además, permite evidenciar las dependencias y relaciones de las tareas</li>
+        <br>
+        <li class="text-justify"><b>Planificación de proyectos: </b>Estas se pueden usar para gestionar proyectos de eventos que puedan tener multiples dependencias y actividades interrelacionadas; asimismo, ofrece una representación visual del plazo del proyecto</li>
+        <br>
+        
+        <li class="text-justify"><b>Gestión de proyectos de negocios: </b>Las empresas pueden sacar provecho en proyectos donde se deban identificar y gestionar rutas críticas además de hacer un seguimiento estratégico de las tareas  </li>
+        <br>
+
+        <li class="text-justify"><b>Salud y ciencias médicas: </b> En la industría de la salud también se pueden aprovechar estas herramientas, de la siguiente manera: Se puede implementar para programas de atención médica y gestionar proyectos deinstalaciones medicas o implementación de sistemas de información internos</li>
+        <br>
+
+        <li class="text-justify"><b>Construcción e ingeniería: </b>Estas herramientas se pueden usar en la construcción e ingenieria para supervisar y planificar la construcción de estructuras y desarrollo de ingenieria civil; además de gestionar la dependencia de actividades y rutas críticas</li>
+      </ul>
+      </div>
+      <div class="mt-10">
+        <h1 class="bg-black py-1 px-3 rounded-md text-[#ffa938] mb-2">
+          Importancia en el campo empresarial
+        </h1>
+        <p class="text-justify">
+        La construcción de modelos desempeña un papel fundamental en el campo empresarial debido a que es una herramienta vital para la toma de decisiones, gestion de recursos, y optimización de procesos. Además, el uso de estos modelos conlleva un beneficio para las empresas que lo apliquen, beneficios tales como una mejor toma de decisiones, simulación de escenarios futuros permitiendo crear planes adecuados para cuando se presenten, entre otros  
+        </p>
+        <br>
+        <p>
+          Asimismo, también existen razones por las cuales estos modelos son importantes en su campo empresarial, siendo estos algunos:
+        </p>
+        <h1 class=" mt-5 font-bold">
+            Gestión de recursos
+          </h1>
+        <p class="text-justify"> 
+          La construcción de modelos permite la optimización de recursos tanto financieros, humanos o materiales, facilitando un uso más efectivo y rentable
+        </p>
+        <h1 class=" mt-5 font-bold">
+            Optmización de decisiones
+          </h1>
+        <p class="text-justify"> 
+          El uso de modelos facilita la toma de decisiones en las empresas, pues proporciona un marco analítico para tener en cuenta varios escenarios y alternativas. Además, se pueden emular distintas estrategias y analizar su impacto antes de implementarlas, lo cual permite minimizar riegos y maximizar beneficios.
+        </p>
+        <h1 class=" mt-5 font-bold">
+            Competitividad
+          </h1>
+        <p class="text-justify"> 
+          Las empresas que hacen uso de modelos pueden marcar una ventaja competitiva sobre las demás, pues el uso de estos permite tomar decisiones de manera más fundamentada y anticipar posible escenarios y situaciones que las demás empresas no contemplaron. Asimismo, permite responder a cambios en el mercado y operar de manera mucho más eficiente en comparación con las demás empresas. 
+        </p>
+      </div>
+      <div>
+        <h1 class="bg-black py-1 px-3 rounded-md text-[#ffa938]">Importancia para el recorrido estudiantil</h1>
+      </div>
+    </div>  
+  </section>
+
+</Layout>
