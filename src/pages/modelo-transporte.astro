@@ -3,86 +3,85 @@ import Layout from "../layouts/Layout.astro";
 
 ---
 
-<Layout title="Introducción a la teoria de colas">
+<Layout title="Modelo de transporte">
   <section class="p-3">
-    <h1 class="title2 pt-3 font-bold bg-[#ffa938] h-12 tracking-widest text-white text-center rounded-lg duration-1000">Introducción a la teoria de colas</h1>
+    <h1 class="title2 pt-3 font-bold bg-[#ffa938] h-12 tracking-widest text-white text-center rounded-lg duration-1000">Modelo de transporte</h1>
     <div class="mt-10">
       <div>
         <h1 class="py-1 px-3 bg-black rounded-md text-[#ffa938]">Generalidades</h1>
         <p class="text-justify mt-2">
-          La teoria de colas es una sección de la investigación de operaciones la cual estudia el comportamiento de sistemas que usan filas o lineas de espera, definiendose filas como la resultante que hay en un sistema cuando la demanda supera la capacidad que puede proporcionar. Este campo es esencial para comprender y optimizar el funcionamiento de sistemas que implican la legada de usuarios o solicitudes para que sean resueltas en un tiempo estimado.
+          Este modelo se funda en la necesidad de llevar unidades (elementos vivos o inertes) de un punto específico llamada fuente u origen hacia otro punto determinado llamado destino. Esta es una herramienta fundamental en la planificación estratégica de distribución de bienes y servicios y logística en distintos sectores. Las <b>empresas ofrecen </b>y por ende tienen <b>disponibilidad</b> y los <b>clientes tienen requerimientos</b> y por esto tienen <b>demanda</b>   
+          <br/>
+          <br/>
+          El objetivo de este modelo es encontrar la mejor manera de hacer la distribución de productos o servicios por medio de redes de rutas y modos de transporte, con base a diferentes variables tales como capacidad de carga, distancia, costos operativos y restricciones logísticas.
+          
+          <br/>
+          <br/>
+          La aplicación de esta metodologia se da en diversos contextos que van desde la planificación para la cadena de suministros hasta la gestión de rutas de transporte público en ciudades 
         </p>
           <br/>
         <p class="text-justify">
           Sus objetivos son los siguientes:
         </p>
           <ul class="list-disc px-5 mt-3">
-            <li class="px-2">Identificar un nivel óptimo de capacidad de sistemas que minimiza el costo</li>
-            <li class="px-2">Evaluar qué pasa con las alternativas para modificar la capacidad de un sistema</li>
-            <li class="px-2">Establecer un balance equilibrado entre las calidad y la cantidad</li>
+            <li class="px-2">Satisfacer todos los requerimientos establecidos por los destinos</li>
+            <li class="px-2">Minimizar los costos</li>
           </ul>
           <br/>
         <p class="text-justify">
-          Además; estas están comformadas por los siguientes componentes
+          Además; para llevar a cabo este modelo se requiere la siguiente metodología:
         </p>
         <ul class="list-disc px-5 mt-3">
-            <li class="px-2"><b>Población: </b> Son todos los clientes que pueden hacer uso del sistema. Esta puede ser finita o infinita </li>
+            <li class="px-2"><b>Modelo imperfecto: </b> Se da a conocer el modelo actual, este usualmente es imperfecto; es decir, la oferta no es igual a la demanda</li>
             <br/>
-            <li class="px-2"><b>Patrón de llegada: </b> Es la forma en como llegan los clientes al sistema en ese tiempo. Este patrón puede ser determinístico, que es cuando se conoce el tiempo o probabilistico, que es cuando no se sabe cada cuanto llega una persona y se miden en tasa (λ) o tiempo medio de llegada </li>
+            <li class="px-2"><b>Modelo perfecto: </b> Se iguala el modelo de tal manera que la oferta iguale a la demanda y esto perfeccione el modelo</li>
             <br/>
-            <li class="px-2"><b>Disciplina de la cola: </b> Es la forma como son atendidos los clientes que están en la fila. Esta tiempo diferentes tipos, siendo estos:</li>
-            <ul class="pl-4 pt-3">
-              <li> <b>PEPS: </b> Primero entra, primero sale </li>
-              <li> <b>UEPS: </b> Último entra, primero sale </li>
-              <li> <b>Prioridad</b>  </li>
-              <li> <b>Aleatorio</b>  </li>
-              <li> <b>Reserva</b>  </li>
-              <li> <b>Necesidad limitada</b>  </li>
-              <li> <b>Menor tiempo de procesamiento </b> </li>
+            <li class="px-2"><b>Método de solución: </b> Esta etapa está compuesta de los siguientes pasos:</li>
+            <ul class="pl-4 pt-3 list-decimal">
+              <li>Se formula el modelo matemático: Aqui se hace uso de la formulación de modelos matemáticos (Para profundizar, visita esta <a href="/pasos-modelos" class=" underline font-bold" >sección</a> ) </li>
+              <br/>
+              <li>Se establecen los grados de libertad: En este paso se procede a definir los grados de libertad, los cuales son los que indican la cantidad de respuestas que va a tener el modelo, por ende este no puede ser negativo</li>
+              
+              <br/>
+              
+              <li>Aplicar diferentes metodos de transporte (Esquina Noroeste, Costo mínimo, Método de Vogel): Se resuelve el modelo con los 3 tipos de transportes para conocer como se comportan las variables y cual sería el resultado de cada modelo</li>
+              <br/>
+              <li>Identificar la solución (Elegir el mejor de los 3 métodos): En el último paso se comparan los resultados de los 3 modelos y se escoge el mejor para asi cumplir los objetivos de este algoritmo de transporte</li>
             </ul>
             <br/>
-            <li class="px-2"><b>Número de canales: </b>Es la manera en la que se distribuye el sistema. Estos pueden ser:</li>
-            <ul class="pl-4 pt-3">
-              <li> 1 cola, 1 servidor </li>
-              <li> 1 cola multiples servidores </li>
-              <li> Multiples colas, multiple servidores</li>
-              <li> 1 cola, servidores secuenciales </li>
-            </ul>
+            <li class="px-2"><b>Solución: </b>Aqui ya se resuelve el modelo</li>
             <br/>
-            <li class="px-2"><b>Patrón de servicio: </b>Es la forma en como son atendidos los clientes. Este hace uso de 2 tiempos, al igual que el patron de llegada, los cuales son probabilistico y deterministico y se mide por medio de tasa media de servicio (µ) y tiempo medio de servicio </li>
+            <li class="px-2"><b>Interpretación: </b> Una vez se soluciona el modelo, se busca justificar la solución y el metodo de transporte que fue más optimo para el proyecto </li>
             <br/>
-            <li class="px-2"><b>Capacidad del sistema: </b> Es el número de clientes que puede atender el sistema, esta puede ser finita o infinita</li>
           </ul>
           <br/>
         <p class="text-justify">
-          Por ultimo, en esta teoria se da algo que se conoce como notación Kendall la cual fue introducida por David Kendall en 1953. Esta notación está compuesta por 6 variables las cuales van en el siguiente orden
+          Añadiendo a lo anterior, estos son los distintos metodos de transportes:
+          <br/>
+          <br/>
+
+          <p><b>Esquina Noroeste:</b></p>
           <ul class="list-decimal px-5 mt-3">
-            <li class="px-2"><b>A: </b>Patrón de llegada</li>
-            <li class="px-2"><b>B: </b>Patrón de servicio</li>
-            <li class="px-2"><b>C: </b>Número de servidores</li>
-            <li class="px-2"><b>D: </b>Disciplina de la fila</li>
-            <li class="px-2"><b>E: </b>Capacidad del sistema</li>
-            <li class="px-2"><b>F: </b>Población de clientes</li>
+            <li class="px-2"> Es sencillo y facil de realizar</li>
+            <li class="px-2">No se tienen en cuenta los costos para realizar las asignaciones</li>
+            <li class="px-2">Generalmente situa al proyecto lejos del óptimo</li>
+          </ul>
+          <br>
+          <p><b>Costo mínimo:</b></p>
+          <ul class="list-decimal px-5 mt-3">
+            <li class="px-2"> Es más elaborado con respecto al de Esquina Noroeste</li>
+            <li class="px-2">Tiene en cuenta los costos para realizar asignaciones</li>
+            <li class="px-2">Usualmente tiene un acercamiento mayor al óptimo</li>
+          </ul>
+          <br>
+          <p><b>Método de Vogel:</b></p>
+          <ul class="list-decimal px-5 mt-3">
+            <li class="px-2"> Es más elaborado con respecto, este es más técnico y dispendioso</li>
+            <li class="px-2">Tiene en cuenta los costos, las ofertas y las demandas para hacer las asignaciones</li>
+            <li class="px-2">Usualmente tiene un acercamiento mayor al óptimo</li>
           </ul>
         </p>
           <br/>
-          <p>
-            Además, esta cuenta con las siguientes medidas de desempeño que se desarrollan con el fin de la gestión eficiente de el servicio y la fila:
-          </p>
-          <br/>
-          <ul class="list-disc px-5">
-            <li class="text-justify"><b>Probabilidad de ocupación </b></li>
-            <br>
-            <li class="text-justify"><b>Probabilidad de ocio </b></li>
-            <br>
-            <li class="text-justify"><b>Número de clientes promedio esperando en la fila</b></li>
-            <br>
-            <li class="text-justify"><b>Número de clientes promedio esperando en la el sistema</b></li>
-            <br>
-            <li class="text-justify"><b>Tiempo promedio de clientes esperando en la fila </b></li>
-            <br>
-            <li class="text-justify"><b>Tiempo promedio de clientes esperando en el sistema</b></li>
-
           </ul>
       </div>
       <div class="mt-10">
