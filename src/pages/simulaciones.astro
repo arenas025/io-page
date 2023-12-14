@@ -10,97 +10,81 @@ import Layout from "../layouts/Layout.astro";
       <div>
         <h1 class="py-1 px-3 bg-black rounded-md text-[#ffa938]">Generalidades</h1>
         <p class="text-justify mt-2">
-          La teoria de colas es una sección de la investigación de operaciones la cual estudia el comportamiento de sistemas que usan filas o lineas de espera, definiendose filas como la resultante que hay en un sistema cuando la demanda supera la capacidad que puede proporcionar. Este campo es esencial para comprender y optimizar el funcionamiento de sistemas que implican la legada de usuarios o solicitudes para que sean resueltas en un tiempo estimado.
-        </p>
+          La simulación es una herramienta que consiste en mirar sistemas por medio de un experimento real o un experimento sobre el modelo del sístema. Esta herramienta es de bastante utilidad en la investigación de operaciones ya que permite a las empresas representar escenarios similares a los reales teniendo en cuenta distintas variables y como se comportarian estas.  
+          <br/>
+          <br/>
+
+          Estos modelos pueden ser <b>icónicos, análogos y matemáticos,</b>donde los matemáticos pueden tener soluciones analiticas o por simulación. Añadiendo a lo anterior, los métodos matemáticos tienen los siguientes tipos: 
+          </p>
+          <ul class="list-disc px-5 mt-3">
+            <li class="px-2"> <b>Estático/Dinámico: </b> Aquí las variables cambian durante el tiempo</li>
+            <li class="px-2"> <b>Determinístico: </b> Aquí la respuesta es certera</li>
+            <li class="px-2"> <b>Continuo: </b> Aquí la variable cambia gradualmente</li>
+            <li class="px-2"> <b>Discretos: </b> Aquí la variable puede cambiar a saltos repentinamente  </li>
+            <li class="px-2"> <b>Estocástico: </b> Aquí la respuesta varía  </li>
+          </ul>
           <br/>
         <p class="text-justify">
-          Sus objetivos son los siguientes:
+          Estos son los aspectos que la hacen importante:
         </p>
           <ul class="list-disc px-5 mt-3">
-            <li class="px-2">Identificar un nivel óptimo de capacidad de sistemas que minimiza el costo</li>
-            <li class="px-2">Evaluar qué pasa con las alternativas para modificar la capacidad de un sistema</li>
-            <li class="px-2">Establecer un balance equilibrado entre las calidad y la cantidad</li>
+            <li class="px-2">Se puede aprender del sistema ya que la simulación se hace sobre este, por lo tanto permite conocerlo y estudiarlo a fondo</li>
+            <li class="px-2">Permite conocer respuestas</li>
+            <li class="px-2">Facilita una mejor toma de decisiones</li>
           </ul>
           <br/>
         <p class="text-justify">
-          Además; estas están comformadas por los siguientes componentes
+          Sin embargo; la simulación tiene sus ventajas y desventajas, siendo estas:
         </p>
+        <p class="font-bold">Ventajas</p>
         <ul class="list-disc px-5 mt-3">
-            <li class="px-2"><b>Población: </b> Son todos los clientes que pueden hacer uso del sistema. Esta puede ser finita o infinita </li>
+          <li>El tiempo real se puede comprimir</li>
+          <li>No interrumpe el sistema real</li>
+          <li>Aprendizaje y compresión de todo</li>
+        </ul>
+        <p class="font-bold">Desventajas</p>
+        <ul class="list-disc px-5 mt-3">
+          <li>Consume recursos técnicos y humanos</li>
+          <li>Requiere largo tiempo de dedicación</li>
+          <li>La construcción del modelo requiere entrenamiento</li>
+          <li>Los resultados pueden ser dificiles de interpretar</li>
+        </ul>
+        <p>Por otra parte, para llevar a cabo esta herramienta se debe llevar a cabo una metodologia, siendo esta</p>
+        <ul class="list-decimal px-5 mt-3">
+            <li class="px-2"><b>Formulación del problema: </b> Aquí se define lo que se quiere hacer</li>
             <br/>
-            <li class="px-2"><b>Patrón de llegada: </b> Es la forma en como llegan los clientes al sistema en ese tiempo. Este patrón puede ser determinístico, que es cuando se conoce el tiempo o probabilistico, que es cuando no se sabe cada cuanto llega una persona y se miden en tasa (λ) o tiempo medio de llegada </li>
+            <li class="px-2"><b>Diseño del modeo conceptual: </b> En esta etapa se plasma y se redacta todo sobre el modelo</li>
             <br/>
-            <li class="px-2"><b>Disciplina de la cola: </b> Es la forma como son atendidos los clientes que están en la fila. Esta tiempo diferentes tipos, siendo estos:</li>
-            <ul class="pl-4 pt-3">
-              <li> <b>PEPS: </b> Primero entra, primero sale </li>
-              <li> <b>UEPS: </b> Último entra, primero sale </li>
-              <li> <b>Prioridad</b>  </li>
-              <li> <b>Aleatorio</b>  </li>
-              <li> <b>Reserva</b>  </li>
-              <li> <b>Necesidad limitada</b>  </li>
-              <li> <b>Menor tiempo de procesamiento </b> </li>
-            </ul>
+            <li class="px-2"><b>Recolección de datos: </b> Aquí es donde se recogen los datos con los que se van a trabajar y eventualmente se filtran</li>
             <br/>
-            <li class="px-2"><b>Número de canales: </b>Es la manera en la que se distribuye el sistema. Estos pueden ser:</li>
-            <ul class="pl-4 pt-3">
-              <li> 1 cola, 1 servidor </li>
-              <li> 1 cola multiples servidores </li>
-              <li> Multiples colas, multiple servidores</li>
-              <li> 1 cola, servidores secuenciales </li>
-            </ul>
+            <li class="px-2"><b>Construcción del modelo</b>
             <br/>
-            <li class="px-2"><b>Patrón de servicio: </b>Es la forma en como son atendidos los clientes. Este hace uso de 2 tiempos, al igual que el patron de llegada, los cuales son probabilistico y deterministico y se mide por medio de tasa media de servicio (µ) y tiempo medio de servicio </li>
-            <br/>
-            <li class="px-2"><b>Capacidad del sistema: </b> Es el número de clientes que puede atender el sistema, esta puede ser finita o infinita</li>
-          </ul>
-          <br/>
-        <p class="text-justify">
-          Por ultimo, en esta teoria se da algo que se conoce como notación Kendall la cual fue introducida por David Kendall en 1953. Esta notación está compuesta por 6 variables las cuales van en el siguiente orden
-          <ul class="list-decimal px-5 mt-3">
-            <li class="px-2"><b>A: </b>Patrón de llegada</li>
-            <li class="px-2"><b>B: </b>Patrón de servicio</li>
-            <li class="px-2"><b>C: </b>Número de servidores</li>
-            <li class="px-2"><b>D: </b>Disciplina de la fila</li>
-            <li class="px-2"><b>E: </b>Capacidad del sistema</li>
-            <li class="px-2"><b>F: </b>Población de clientes</li>
-          </ul>
-        </p>
-          <br/>
-          <p>
-            Además, esta cuenta con las siguientes medidas de desempeño que se desarrollan con el fin de la gestión eficiente de el servicio y la fila:
-          </p>
-          <br/>
-          <ul class="list-disc px-5">
-            <li class="text-justify"><b>Probabilidad de ocupación </b></li>
             <br>
-            <li class="text-justify"><b>Probabilidad de ocio </b></li>
-            <br>
-            <li class="text-justify"><b>Número de clientes promedio esperando en la fila</b></li>
-            <br>
-            <li class="text-justify"><b>Número de clientes promedio esperando en la el sistema</b></li>
-            <br>
-            <li class="text-justify"><b>Tiempo promedio de clientes esperando en la fila </b></li>
-            <br>
-            <li class="text-justify"><b>Tiempo promedio de clientes esperando en el sistema</b></li>
 
+            <li class="px-2"><b>Verificación y validación del modelo: </b>En esta etapa, se busca validar que el modelo tenga coherencia con los datos </li>
+            <br/>
+            <li class="px-2"><b>Documentación: </b> Aquí existe documentación formal, la cual se da en terminos técnicos, e informal que es en términos que todos pueden entender</li>
+            <br>
+
+            <li class="px-2"><b>Implementación: </b> Se lleva a cabo </li>
           </ul>
       </div>
       <div class="mt-10">
         <h1 class="bg-black py-1 px-3 rounded-md mb-2 text-[#ffa938]">Campos de aplicación</h1>
         <p class="text-justify mt-2">
-          La adminstración de proyectos se ha convertido en un componente importante en el desarrollo de iniciativas en distintas areas, herramientas como el diagrama de Gantt, de PERT y CPM han permitido que las empresas puedan planificar, coordinar y controlar actividades en proyectos complejos, estos son algunos de sus campos de aplicación.
+          La simulación es una herramienta fundamental que puede aplicarse en distintas areas para variedades de empresas ya que les permite a estas representar fenomenos mediante modelos, los cuales tienen en cuenta las variables involucradas y con base a esto pueden tomar decisiones mucho más informadas y con más fundamentos para una mejor planificación estratégica. Estos son algunos campos de aplicación de la simulación:
         </p>
         <br/>
       <ul class="list-disc px-5">
-        <li class="text-justify"><b>Desarrollo de software: </b>Estas herramientas se usan para visualizar y coordinar las etapas de desarrollo del software, gestionar plazos y asignar recursos; además, permite evidenciar las dependencias y relaciones de las tareas</li>
+        <li class="text-justify"><b>Finanzas y economía: </b>Se encuentra el uso de la simulación en la economia y las finanzas ya que permite modelar escenarios económicos, riesgos financieros y analizar carteras de inversión de tal manera que se minimicen riesgos y se puedan aprovechar las posibles oportunidades.</li>
         <br>
-        <li class="text-justify"><b>Planificación de proyectos: </b>Estas se pueden usar para gestionar proyectos de eventos que puedan tener multiples dependencias y actividades interrelacionadas; asimismo, ofrece una representación visual del plazo del proyecto</li>
+        <li class="text-justify"><b>Defensa y seguridad: </b>En el entorno militar, la simulación es importante ya que se modelan situación estratégicas y tácticas para el entrenamiento y la planificación; además esta también se usa en la simulación de desastre para encontrar rutas de evacuación y evaluar la seguridad de las estructuras.</li>
         <br>
         
-        <li class="text-justify"><b>Gestión de proyectos de negocios: </b>Las empresas pueden sacar provecho en proyectos donde se deban identificar y gestionar rutas críticas además de hacer un seguimiento estratégico de las tareas  </li>
+        <li class="text-justify"><b>Automovilismo: </b> La simulación se da en la mayoria de los deportes pero es más evidente en el campo del automovilismo, ya que los pilotos cuentan con maquinas de simulación con los cuales pueden estudiar a fondo cada pista y encontrar el estilo de conducción adecuado para cada una de estas, evaluando las curvas, el peso del automovil, entre otras variables.</li>
         <br>
 
-        <li class="text-justify"><b>Salud y ciencias médicas: </b> En la industría de la salud también se pueden aprovechar estas herramientas, de la siguiente manera: Se puede implementar para programas de atención médica y gestionar proyectos deinstalaciones medicas o implementación de sistemas de información internos</li>
+        <li class="text-justify"><b>Salud y medicina: </b> En el área de la salud, la simulación puede usar desde la planificación para hospitales, protocolos de tratamientos, hasta situaciones reales. Además, los estudiantes usualmente hacen uso de estas herramientas antes de ejercer su profesión, esto con el fin de estar lo más asimilado posible a la realidad y se reduzca el mayor número de errores e inconvenientes</li>
         <br>
 
         <li class="text-justify"><b>Construcción e ingeniería: </b>Estas herramientas se pueden usar en la construcción e ingenieria para supervisar y planificar la construcción de estructuras y desarrollo de ingenieria civil; además de gestionar la dependencia de actividades y rutas críticas</li>
@@ -111,25 +95,31 @@ import Layout from "../layouts/Layout.astro";
           Importancia en el campo empresarial
         </h1>
         <p class="text-justify">
-        La administración de proyectos por medio de las herramientas de Diagrama de Gantt, de Pert y CPM permite que las empresas tengan beneficios frente a aquellas que no hace uso de estas ya que es una herramienta fundamental para la gestión de actividades a largo plazo y la planificación estratégica de estos. Estas son las razones por las que estas herramientas cobran importancia en el mundo empresarial:
+        La simulación juega un papel fundamental en el campo empresarial, pues esta le permite a las empresas modelar situaciones y sistemas complejos involucrando variables determinantes. Además, esto facilita a las empresas gestionar mejor sus recursos de tal manera que no se desperdicien en acciones que no le brinden beneficio alguno a la compañia y puedan optimizar estos recursos. Estos son algunos de las razones de la importancia de la simulación en el campo empresarial.
         </p>
         <h1 class=" mt-5 font-bold">
-            Gestión de riesgos
+            Mejora en la toma de decisiones
           </h1>
         <p class="text-justify"> 
-          La administración permite identificar, evaluar y gestionar los riesgos que se presenten en las distintas actividades a largo plazo, lo cual minimiza las consecuencias negativas y aumentan las probabilidades de éxito.
+          La simulación al permitir representar distintos escenarios en los que se evaluen diferentes alternativas, le da la posibilidad a que las empresas puedan tomar sus decisiones basadas en argumentos y elementos demostrables.
         </p>
         <h1 class=" mt-5 font-bold">
-            Competitividad y rentabilidad
+            Diseño de estrategia y planificación a largo plazo
           </h1>
         <p class="text-justify"> 
-          Las empresas que hacen uso de las herramientas de administración de proyectos obtienen una ventaja competitiva importante frente a las demás ya que estas permiten prever distintos escenarios a largo plazo y considerar las actividades que requieren total atención.
+          Las empresas pueden aprovechar la simulación para conocer un entorno futuro similar, ya que aunque la simulación no brinda un futuro exacto, si puede brindar uno que se aproxime a la realidad y esto es importante para estas empresas ya que les da la oportunidad de tener un bosquejo de lo que podría llegar a ser el futuro
         </p>
         <h1 class=" mt-5 font-bold">
-            Innovación y desarrollo 
+            Optimización de procesos 
           </h1>
         <p class="text-justify"> 
-          Estas herramientas ayudan a las empresas que buscan llevar a cabo actividades de innovación y desarrollo ya que brindan una visión más precisa del proyecto, las actividades fundamentales y las dependencias entre estas actividades . 
+          La simulación en este aspecto es usada para analizar y modelar procesos que van desde la cadena de suministros hasta la logística y permite evidenciar cuellos de boteela, mejorar la producción, reducir tiempos y minimizar los costos . 
+        </p>
+        <h1 class=" mt-5 font-bold">
+            Implementación de cambios  
+          </h1>
+        <p class="text-justify"> 
+          Gracias a que una de las ventajas de la simulación es que se puede implementar sin alterar el flujo normal de la producción o los procesos, las empresas pueden hacer uso de estas para simular el entorno una vez implementado este nuevo cambios, puede ser tecnologia, nuevo personal o incluso un proceso diferente. 
         </p>
       </div>
       <div>
