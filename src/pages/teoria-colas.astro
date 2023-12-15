@@ -5,20 +5,24 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Introducción a la teoria de colas">
   <section class="p-3">
-    <h1 class="title2 pt-3 font-bold bg-[#ffa938] h-12 tracking-widest text-white text-center rounded-lg duration-1000">Introducción a la teoria de colas</h1>
+    <h1 class="title2 pt-5 font-bold bg-[#ffa938] h-28 tracking-widest text-white text-center rounded-lg duration-1000">Introducción a la teoria de colas</h1>
     <div class="mt-10">
       <div>
         <h1 class="py-1 px-3 bg-black rounded-md text-[#ffa938]">Generalidades</h1>
         <p class="text-justify mt-2">
           La teoria de colas es una sección de la investigación de operaciones la cual estudia el comportamiento de sistemas que usan filas o lineas de espera, definiendose filas como la resultante que hay en un sistema cuando la demanda supera la capacidad que puede proporcionar. Este campo es esencial para comprender y optimizar el funcionamiento de sistemas que implican la legada de usuarios o solicitudes para que sean resueltas en un tiempo estimado.
         </p>
+        <img src="/public/filas.jpg" alt="imagen finanzas" class="rounded-2xl">
+          <br/>
           <br/>
         <p class="text-justify">
           Sus objetivos son los siguientes:
         </p>
           <ul class="list-disc px-5 mt-3">
             <li class="px-2">Identificar un nivel óptimo de capacidad de sistemas que minimiza el costo</li>
+            <br/>
             <li class="px-2">Evaluar qué pasa con las alternativas para modificar la capacidad de un sistema</li>
+            <br/>
             <li class="px-2">Establecer un balance equilibrado entre las calidad y la cantidad</li>
           </ul>
           <br/>
@@ -31,7 +35,7 @@ import Layout from "../layouts/Layout.astro";
             <li class="px-2"><b>Patrón de llegada: </b> Es la forma en como llegan los clientes al sistema en ese tiempo. Este patrón puede ser determinístico, que es cuando se conoce el tiempo o probabilistico, que es cuando no se sabe cada cuanto llega una persona y se miden en tasa (λ) o tiempo medio de llegada </li>
             <br/>
             <li class="px-2"><b>Disciplina de la cola: </b> Es la forma como son atendidos los clientes que están en la fila. Esta tiempo diferentes tipos, siendo estos:</li>
-            <ul class="pl-4 pt-3">
+            <ul class="pl-10 pt-3 list-disc">
               <li> <b>PEPS: </b> Primero entra, primero sale </li>
               <li> <b>UEPS: </b> Último entra, primero sale </li>
               <li> <b>Prioridad</b>  </li>
@@ -42,7 +46,7 @@ import Layout from "../layouts/Layout.astro";
             </ul>
             <br/>
             <li class="px-2"><b>Número de canales: </b>Es la manera en la que se distribuye el sistema. Estos pueden ser:</li>
-            <ul class="pl-4 pt-3">
+            <ul class="pl-10 pt-3 list-disc">
               <li> 1 cola, 1 servidor </li>
               <li> 1 cola multiples servidores </li>
               <li> Multiples colas, multiple servidores</li>
@@ -82,8 +86,9 @@ import Layout from "../layouts/Layout.astro";
             <li class="text-justify"><b>Tiempo promedio de clientes esperando en la fila </b></li>
             <br>
             <li class="text-justify"><b>Tiempo promedio de clientes esperando en el sistema</b></li>
-
           </ul>
+        <img src="/public/colas.jpg" alt="imagen finanzas" class="rounded-2xl">
+
       </div>
       <div class="mt-10">
         <h1 class="bg-black py-1 px-3 rounded-md mb-2 text-[#ffa938]">Campos de aplicación</h1>
